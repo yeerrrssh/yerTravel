@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">YerTravel</string>
+    <string name="startButton">start</string>
+    <string name="logo">yer.Travel</string>
+    <string name="startPage">Travel to Korea with us</string>
+    <string name="startPageInfo">Unique tourist routes and city histories</string>
+    <string name="chooseACity">Choose a city</string>
+    <string name="chooseACityInfo">to see the sights and other info</string>
+    <string name="soul">Soul</string>
+    <string name="busan">Busan</string>
+    <string name="soon">Soon</string>
+    <string name="cheju">Cheju</string>
+    <string name="landmarks">Landmarks</string>
+    <string name="shopping">Shopping</string>
+    <string name="hikes">Hikes</string>
+    <string name="food">Food</string>
+    <string name="notesH">Visited</string>
+    <string name="notesP">achieve your travels</string>
+    <string name="converterH">Currency converter</string>
+    <string name="converterP">currency conversion to won</string>
+    <string name="backBtn">Go back</string>
+    <string name="soulInfoMini">The capital of Korea.
+It manages to combine ultramodern buildings with an ancient historical center.</string>
+    <string name="seeMore"><u>See more...</u></string>
+
+    <string name="landmark1">• <u>The folklore village of Bukchon</u></string>
+    <string name="landmark1clear">The folklore village of Bukchon</string>
+    <string name="landmark2">• <u>Gyeongbokgung Palace</u></string>
+    <string name="landmark2clear">Gyeongbokgung Palace</string>
+    <string name="landmark3">• <u>Changdeokgung Palace</u></string>
+    <string name="landmark4">• <u>Changyonggong Palace</u></string>
+    <string name="landmark5">• <u>Gyeonghigong Palace</u></string>
+    <string name="landmark6">• <u>Choges Temple</u></string>
+    <string name="landmark7">• <u>Bongeuns Temple</u></string>
+    <string name="landmark8">• <u>Jeonme Shrine</u></string>
+    <string name="landmark9">• <u>Myeongdong Cathedral</u></string>
+    <string name="landmark10">• <u>Korean War Memorial</u></string>
+    <string name="landmark11">• <u>National Museum of Korea</u></string>
+
+    <string name="address">Address</string>
+    <string name="folkloreVillageAddress">37, Gyedong-gil, Jongno-gu, Seoul 서울특별시 종로구 계동길 37</string>
+    <string name="workHours">Work hours</string>
+    <string name="folkloreVillageHours1">Allowed time for visiting:</string>
+    <string name="folkloreVillageHours2">10:00–17:00 (weekdays, Saturdays)</string>
+
+    <string name="markAsVisited">Mark as visited</string>
+    
+    <string name="landmark1text">Bukchon is one of the oldest districts of Seoul that has survived to the present day. In Joseon times, these traditional houses with a tiled roof belonged to the Korean nobility – "Yangban". The Bukchon Folklore Village is located next to Gyeongbokgung and Changdeokgung Palaces and the Jeongme Royal Tomb. It appeared here almost simultaneously with the founding of Seoul more than six centuries ago. The houses of the nobility in the traditional style have come down to us almost unchanged. There is a Center of traditional culture and restaurants of traditional cuisine, visiting which you can immerse yourself in the atmosphere of old Korea. This area was called Bukchon, which means "northern village", because it is located north of the Chongecheon Creek and Jeongno Street. During the Joseon Dynasty, members of the royal family and the highest circles of the capital\'s aristocracy lived here. Bukchon includes the Woso-dong, Che-dong, Kahvedon and Insadon neighborhoods.</string>
+
+</resources>
