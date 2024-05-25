@@ -29,7 +29,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -37,4 +36,19 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    implementation("com.squareup.retrofit2:retrofit:2.8.1")
+    implementation("com.squareup.retrofit2:converter-gson:2.1.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:3.4.1")
+    implementation("com.google.code.gson:gson:2.6.2")
+
+
+    implementation("org.osmdroid:osmdroid-android:6.1.18")
+    implementation("org.osmdroid:osmdroid-wms:6.1.18")
+    implementation("org.osmdroid:osmdroid-mapsforge:6.1.18")
+    implementation("org.osmdroid:osmdroid-geopackage:6.1.18") {
+        exclude(group = "org.osmdroid.gpkg")
+        exclude(module = "ormlite-core")
+        exclude(group = "com.j256.ormlite")
+    }
 }

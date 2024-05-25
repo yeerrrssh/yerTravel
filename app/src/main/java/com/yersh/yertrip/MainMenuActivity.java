@@ -41,25 +41,7 @@ public class MainMenuActivity extends AppCompatActivity {
             }
         });
 
-        busanCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainMenuActivity.this, BusanActivity.class);
 
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        chejuCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainMenuActivity.this, ChejuActivity.class);
-
-                startActivity(intent);
-                finish();
-            }
-        });
 
         converter.setOnClickListener(new View.OnClickListener() {
             @Override

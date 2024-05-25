@@ -54,7 +54,7 @@
                 android:background="@drawable/round_back_gray_20"
                 android:orientation="vertical"
                 android:paddingLeft="20dp"
-                android:paddingTop="15dp"
+                android:paddingTop="20dp"
                 android:paddingRight="20dp"
                 android:paddingBottom="20dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -63,14 +63,13 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:gravity="center|left"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/h1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:fontFamily="@font/public_sans_bold"
                         android:text="@string/soul"
                         android:textColor="@color/white"
@@ -80,19 +79,8 @@
                         android:id="@+id/imageView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         app:srcCompat="@drawable/korea_icon" />
 
-                    <TextView
-                        android:id="@+id/temperature"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="12"
-                        android:fontFamily="@font/public_sans_extralight"
-                        android:gravity="right"
-                        android:text="20°C  now"
-                        android:textColor="@color/white"
-                        android:textSize="20sp" />
 
                 </LinearLayout>
 
@@ -139,126 +127,77 @@
 
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/landmark1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:fontFamily="@font/public_sans_extralight"
-                    android:text="@string/landmark1"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+                <Spinner
+                    android:id="@+id/place_spinner"
+                    android:layout_width="328dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12sp">
 
-                <TextView
-                    android:id="@+id/landmark2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/public_sans_extralight"
-                    android:text="@string/landmark2"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/landmark3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/public_sans_extralight"
-                    android:text="@string/landmark3"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/landmark4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/public_sans_extralight"
-                    android:text="@string/landmark4"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/landmark5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/public_sans_extralight"
-                    android:text="@string/landmark5"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/landmark6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/public_sans_extralight"
-                    android:text="@string/landmark6"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/landmark7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/public_sans_extralight"
-                    android:text="@string/landmark7"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/landmark8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/public_sans_extralight"
-                    android:text="@string/landmark8"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/landmark9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/public_sans_extralight"
-                    android:text="@string/landmark9"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/landmark10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/public_sans_extralight"
-                    android:text="@string/landmark10"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/landmark11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/public_sans_extralight"
-                    android:text="@string/landmark11"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+                </Spinner>
 
             </LinearLayout>
 
-            <ImageView
-                android:layout_width="340dp"
-                android:layout_height="340dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="100dp"
-                android:src="@drawable/map"/>
+
+            <org.osmdroid.views.MapView
+                android:id="@+id/map"
+                tilesource="Mapnik"
+                android:layout_width="wrap_content"
+                android:layout_height="290sp"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="16sp"
+                android:layout_marginEnd="23dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.45"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/grayCard2" />
+
+            <LinearLayout
+                android:id="@+id/markVisitedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="23dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:paddingEnd="10dp"
+                android:layout_weight="2"
+                android:background="@drawable/round_back_gray_20"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+                <TextView
+                    android:layout_width="285dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/inter_bold"
+                    android:paddingStart="20sp"
+                    android:paddingTop="12sp"
+                    android:text="Mark as visited"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/visitedCircle"
+                    android:layout_width="11dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:paddingStart="5sp"
+                    android:paddingTop="5sp"
+                    android:paddingEnd="5sp"
+                    android:paddingBottom="5sp"
+
+                    app:srcCompat="@drawable/unvisited_place_icon" />
+
+
+            </LinearLayout>
 
         </LinearLayout>
+
     </ScrollView>
 
 

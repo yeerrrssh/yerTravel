@@ -3,10 +3,13 @@ package com.yersh.yertrip;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,13 +17,17 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.gson.JsonObject;
+
 import java.util.Arrays;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class ConverterActivity extends AppCompatActivity {
 
-    String[] values1 = { "USD", "EUR", "RUB" };
-    String[] values2 = { "KRW"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,24 +40,43 @@ public class ConverterActivity extends AppCompatActivity {
             return insets;
         });
 
-        Spinner spinner1 = findViewById(R.id.firstSpinner);
-        ArrayAdapter<String> adapter1 = new ArrayAdapter(this, R.layout.spinner_list, values1);
-        adapter1.setDropDownViewResource(R.layout.spinner_list);
-        spinner1.setAdapter(adapter1);
+        final EditText convertFrom = findViewById(R.id.GBPCurrencyValue);
+        final TextView convertToValue = findViewById(R.id.convertToValue);
+        final Spinner convertToSpinner = findViewById(R.id.convertToSpinner);
 
-        Spinner spinner2 = findViewById(R.id.secondSpinner);
-        ArrayAdapter<String> adapter2 = new ArrayAdapter(this, R.layout.spinner_list, values2);
-        adapter2.setDropDownViewResource(R.layout.spinner_list);
-        spinner2.setAdapter(adapter2);
+        String[] dropdownList = {"RUB", "USD", "EUR", "UAH", "GEL"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_currency_item, dropdownList);
+        convertToSpinner.setAdapter(adapter);
 
-        ImageView backBtn = findViewById(R.id.backBtn);
-        backBtn.setOnClickListener(new View.OnClickListener() {
+        convertToSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ConverterActivity.this, MainMenuActivity.class);
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                com.example.welcometotheuk.Retrofit.IRetrofitInterface retrofitInterface = com.example.welcometotheuk.Retrofit.RetrofitBuilder.getRetrofitInstance().create(com.example.welcometotheuk.Retrofit.IRetrofitInterface.class);
+                Call<JsonObject> call = retrofitInterface.getExchangeCurrency("KRW");
+                call.enqueue(new Callback<JsonObject>() {
+                    @Override
+                    public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                        JsonObject res = response.body();
+                        JsonObject rates = res.getAsJsonObject("conversion_rates");
 
-                startActivity(intent);
-                finish();
+                        Double currency = Double.valueOf(convertFrom.getText().toString());
+                        Double multiplier = Double.valueOf(rates.get(convertToSpinner.getSelectedItem().toString()).toString());
+
+                        Double result = currency * multiplier;
+
+                        convertToValue.setText(String.valueOf(result));
+                    }
+
+                    @Override
+                    public void onFailure(Call<JsonObject> call, Throwable t) {
+
+                    }
+                });
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
     }
